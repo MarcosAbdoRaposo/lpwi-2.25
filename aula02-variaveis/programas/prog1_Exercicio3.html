@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo do valor do jantar</title>
+</head>
+<body>
+    <h1>Cálculo do valor do jantar</h1>
+    <script>
+        // exemplo 1.7 do livro Lógica de Programação e Algoritmos com Javascript
+        // Edécio Fernando Iepsen
+        // Novatec 
+
+        const compra = Number(prompt("Valor da Comprar R$: ")) // lê o valor da Compra
+        const formaPag = prompt("Infome V para pagamento a Vista ou P para pagamento a prazo") // Le a forma de pagamento
+        if (formaPag == "V") {
+            const desconto = compra * 0.10 // calcula o valor do desconto
+            const total = compra - desconto;
+            alert(`O valor a vista é R$: ${total.toFixed(2)}` )   // exibe o resultado
+        } else {
+            const parcela = compra / 3;
+            alert(`O valor Total é : ${compra.toFixed(2)}\nParcelas R$: ${parcela.toFixed(2)}` )   // exibe o resultado
+
+        }
+
+           
+    </script>
+</body>
+</html>

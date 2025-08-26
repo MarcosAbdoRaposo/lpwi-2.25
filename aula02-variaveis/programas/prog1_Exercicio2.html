@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo do valor do jantar</title>
+</head>
+<body>
+    <h1>Cálculo do valor do jantar</h1>
+    <script>
+        // Elabore um programa para uma pizzaria que informe o
+        //  valor a ser pago por cada cliente. Calcule a taxa de serviço 
+        // e divida o valor total pela quantidade de clientes informada
+        // 
+        //
+
+        const jantar = Number(prompt("Valor do Jantar R$: ")) // lê o valor do jantar
+        const clientes = Number(prompt("Quantidade de Clientes: ")) // lê a quantidade de clientes
+        const garcom = jantar * 0.10 // calcula variáveis de saída
+        const total = jantar + garcom; 
+        const valorPorCliente = total / clientes        
+        alert(`Taxa Garçom R$: ${garcom.toFixed(2)}\nTotal R$: ${total.toFixed(2)}\nValor por Cliente R$ ${valorPorCliente.toFixed(2)}`)   // exibe o resultado
+    </script>
+</body>
+</html>
