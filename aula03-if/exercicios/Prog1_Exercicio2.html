@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multa</title>
+</head>
+<body>
+    <h1>Multa</h1>
+    <p>Elaborar um programa que leia a velocidade permitida em uma estrada e a velocidade de um condutor.
+         Se a velocidade for inferior ou igual a permitida, exiba “Sem Multa”. 
+         Se a velocidade for de até 20% maior que a permitida, exiba “Multa Leve”.
+          E, se a velocidade for superior a 20% da velocidade permitida, exiba “Multa Grave
+
+    </p>
+    <script>
+        // Elabore um programa que leia um número e mostre se é par ou impar
+        // 
+        // 
+       const velocidadePermitida = Number(prompt("Velocidade Permitida: ")) // lê o limite de velocidade
+       const multaLeve = velocidadePermitida * 1.2
+
+       const velocidadeMotorista = Number(prompt("Informe a Velocidade do Motorista: ")) // lê a velicidade do Motorista
+       if (velocidadeMotorista <=  velocidadePermitida) {
+            alert("Sem multa")   // exibe resposta
+
+       } else {
+            if (velocidadeMotorista <= multaLeve) {
+                alert("Multa leve")   // exibe resposta
+            } else {
+                alert("Multa grave")   // exibe resposta
+            }
+       }
+
+
+    </script>
+</body>
+</html>

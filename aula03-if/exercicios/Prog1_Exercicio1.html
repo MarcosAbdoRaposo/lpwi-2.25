@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número par ou impar</title>
+</head>
+<body>
+    <h1>Número par ou impar</h1>
+    <script>
+        // Elabore um programa que leia um número e mostre se é par ou impar
+        // 
+        // 
+       const num = Number(prompt("Número: ")) // lê um dado de entrada
+       if (num % 2 == 0) {
+            alert("Usando o IF tradicional, obtemos que o número " + num + " é par.")   // exibe resposta
+
+       } else {
+          alert("Usando o IF tradicional, obtemos que o " + num + " é impar.")   // exibe resposta
+
+       }
+
+       // Usando o Operador Ternário
+       const natureza = (num % 2 ==0) ? "par" : "impar"
+        alert("Usando o operador ternário, vemos que o número " + num + " é "+ natureza )   // exibe resposta
+    </script>
+</body>
+</html>
