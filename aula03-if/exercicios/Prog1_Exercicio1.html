@@ -7,22 +7,46 @@
 </head>
 <body>
     <h1>Número par ou impar</h1>
+    <form>
+        <p>Número:
+            <input type="number" id="idNumero"
+                    step="1"
+                    min="0"
+                    max="100"
+                    required>
+
+        </p>
+        <input type="submit" value="Par ou Impar">
+    </form>
+    <h3>Local da Resposta</h3>
     <script>
         // Elabore um programa que leia um número e mostre se é par ou impar
         // 
         // 
-       const num = Number(prompt("Número: ")) // lê um dado de entrada
-       if (num % 2 == 0) {
-            alert("Usando o IF tradicional, obtemos que o número " + num + " é par.")   // exibe resposta
+        const frm  = document.querySelector("form")
+        const resp1 = document.querySelector("h3")
 
-       } else {
-          alert("Usando o IF tradicional, obtemos que o " + num + " é impar.")   // exibe resposta
+        frm.addEventListener("submit", (e) => {
+            e.preventDefault()   // evita envio do Form
+            const num =  Number(frm.idNumero.value)
+  /*
+            if (num % 2 == 0) {
+                    alert("Usando o IF tradicional, obtemos que o número " + num + " é par.")   // exibe resposta
 
-       }
+            } else {
+                alert("Usando o IF tradicional, obtemos que o " + num + " é impar.")   // exibe resposta
 
-       // Usando o Operador Ternário
-       const natureza = (num % 2 ==0) ? "par" : "impar"
-        alert("Usando o operador ternário, vemos que o número " + num + " é "+ natureza )   // exibe resposta
+            }
+*/
+            // Usando o Operador Ternário
+            const natureza = (num % 2 ===0) ? "par" : "impar"
+            resp1.innerText = `Usando o operador ternário, vemos que o número ${num}  é  ${natureza}`   // exibe resposta
+
+
+
+        })
     </script>
+
+ 
 </body>
 </html>
